@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cuerpo base */
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Navbar principal */
+  .navbar {
+    background-color: #f7f4f4;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Contenedor central */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo elegante */
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #222;
+    text-decoration: none;
+  }
+  
+  /* Enlaces del navbar */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #000;
+  }
+  
+  /* Estilo del botón hamburguesa (visible en móviles) */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  /* Responsive: estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .nav-links.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-links li {
+      margin-bottom: 1rem;
+    }
+    
+    .nav-links li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  

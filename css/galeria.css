@@ -1,0 +1,46 @@
+.gallery {
+    padding: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 15px; /* Espacio entre columnas */
+    row-gap: 60px; /* Más espacio entre filas */
+    justify-content: center;
+    
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 150px; /* Tamaño fijo */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%); /* Blanco y negro */
+    transition: filter 0.3s ease; /* Transición suave para el cambio */
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%); /* Vuelve al color original cuando pasas el cursor */
+}
+
+/* Diseño Responsive */
+@media (max-width: 1024px) {
+    .gallery-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en móviles grandes */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles pequeños */
+    }
+}

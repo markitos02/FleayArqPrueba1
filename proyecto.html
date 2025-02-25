@@ -7,47 +7,41 @@
   <link rel="stylesheet" href="css/proyecto.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
   <script defer src="js/loadComponents.js"></script>
-  <script src="js/menu-toggle.js"></script>
 </head>
 <body>
     <div id="navbar-container"></div>
 
-    <section id="projects" class="container">
-      <div class="project-card" id="project1">
-        <a href="viviendamayores.html" target="_blank">
-          <img src="img/111.jpg" alt="Proyecto 1">
-        </a>
-        <h3>Viviendas para mayores</h3>
-      </div>
-      <div class="project-card" id="project2">
-        <a href="proyectos/casahuerto.html" target="_blank">
-          <img src="img/222.jpg" alt="Proyecto 2">
-        </a>
-        <h3>Casa huerto</h3>
-      </div>
-      <div class="project-card" id="project3">
-        <a href="proyectos/viviendabajalaluz.html" target="_blank">
-          <img src="img/444.jpg" alt="Proyecto 3">
-        </a>
-        <h3>Vivienda bajo la luz</h3>
-      </div>
-    </section>
-
-    
-  <div id="projectDetailOverlay" class="overlay" >
-    <div id="projectDetail" class="project-detail">
-      <div class="carousel-container">
-        <img src="img/ejemplo.jpg" class="carousel-img" alt="Imagen 1">
-        <img src="img/ejemplo.jpg" class="carousel-img" alt="Imagen 2">
-        <img src="img/ejemplo.jpg" class="carousel-img" alt="Imagen 3">
-      </div>
-      <h2 id="projectTitle">Título del Proyecto</h2>
-      <p id="projectDescription">Descripción detallada del proyecto.</p>
-    </div>
-  </div>
-
+    <main class="projects-container">
+      <h1>Nuestros Proyectos</h1>
+      
+      <section class="projects-grid">
+        <div class="project-card">
+          <h2>Viviendas para mayores</h2>
+          <a href="viviendamayores.html">
+            <img src="img/111.jpg" alt="Viviendas para mayores">
+          </a>
+        </div>
+  
+        <div class="project-card">
+          <h2>Casa Huerto</h2>
+          <a href="proyectos/casahuerto.html">
+            <img src="img/222.jpg" alt="Casa Huerto">
+          </a>
+        </div>
+  
+        <div class="project-card">
+          <h2>Vivienda bajo la luz</h2>
+          <a href="proyectos/viviendaluz.html">
+            <img src="img/444.jpg" alt="Vivienda bajo la luz">
+          </a>
+        </div>
+      </section>
+  
+    </main>
+  
  
   <div id="footer-container"></div>
 
